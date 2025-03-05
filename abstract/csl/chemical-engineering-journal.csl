@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Chemical Engineering Journal</title>
+    <id>http://www.zotero.org/styles/chemical-engineering-journal</id>
+    <link href="http://www.zotero.org/styles/chemical-engineering-journal" rel="self"/>
+    <author>
+      <name>Your Name</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="engineering"/>
+    <category field="chemistry"/>
+    <issn>1385-8947</issn>
+    <updated>2024-01-01T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name initialize-with="." delimiter=", " name-as-sort-order="all" et-al-min="4" et-al-use-first="3" delimiter-precedes-et-al="never"/>
+      <et-al font-style="italic"/>
+      <label form="short" prefix=" "/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="" suffix="" delimiter="">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+    </layout>
+  </citation>
+
+
+  <bibliography entry-spacing="0" second-field-align="flush">
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="author" suffix=", "/>
+      <text variable="container-title" form="short" font-style="italic"/>
+      <text variable="volume" prefix=" " font-weight="bold"/>
+      <text variable="page" prefix=" "/>
+      <text macro="issued" prefix=" (" suffix="). "/>
+    </layout>
+  </bibliography>
+</style>
